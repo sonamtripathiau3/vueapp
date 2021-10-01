@@ -45,7 +45,7 @@ import axios from "axios";
   h3 {
     margin-bottom: 5%;
   }
-  .table {
+  /* .table {
     margin-left: 400px;
-  }
+  } */
 </style>

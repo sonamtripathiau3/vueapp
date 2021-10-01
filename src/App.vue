@@ -1,16 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Users />
+<h1> Type navbar/ users to view them</h1>
+  <input v-model="message">
+   <div  class="mt-5" v-if="message=='users'">
+  <Users/>
+</div>
+<div class="mt-5" v-else>
+  <Dashboard v-bind:message="message"/>
+</div>
+
 </template>
 
 <script>
 import Users from "./components/users.vue"
+import Dashboard from "./layout/Dashboardlayout.vue"
 
 export default {
   name: 'App',
   components: {
-    Users
+    Users,
+    Dashboard
   },
+  data () {
+    return {
+      message: "hello"
+      }
+  }
 }
 </script>
 
